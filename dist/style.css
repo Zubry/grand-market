@@ -1,0 +1,101 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #F5F5F5;
+  font-size: 14px;
+}
+
+hr {
+  border-color: #C0C4CC;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.main-item-box, .item-graph {
+  margin: 2rem 2rem;
+  padding: 1rem;
+  border: 1px solid #E2E2E2;
+  background-color: #F7F7FF;
+  color: #545E75;
+}
+.main-item-box h2 {
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.main-item-box > table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.main-item-box > table tr {
+  border-top: 1px solid #F2D0A4;
+}
+
+.main-item-box > table tr:first-child {
+  border-top: none;
+}
+
+.main-item-box > table td {
+  text-align: left;
+}
+
+.main-item-box > table .thumbnail-large {
+  text-align: center;
+}
+
+.main-item-box > table .td-label {
+  font-weight: bold;
+}
+
+.item-graph {
+  height: 480px;
+  padding-bottom: 6rem;
+}
+
+.item-graph h2 {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.item-graph .duration-selector {
+  display: inline-block;
+  float: right;
+  margin: 0;
+}
+
+.item-graph .duration-selector button {
+  border: none;
+  border-top: 1px solid #B1B5C0;
+  border-bottom: 1px solid #B1B5C0;
+  background-color: #F7F7FF;
+  padding: 0.5rem;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.item-graph .duration-selector button:hover {
+  background-color: #545E75;
+  color: #F7F7FF;
+  transition: 0.25s;
+}
+
+.item-graph .duration-selector button:first-child {
+  border-left: 1px solid #B1B5C0;
+  border-radius: 4px 0 0 4px;
+}
+
+.item-graph .duration-selector button:last-child {
+  border-right: 1px solid #B1B5C0;
+  border-radius: 0 4px 4px 0;
+}
