@@ -20,6 +20,10 @@ api.get('/', function(req, res) {
   res.json(items.suggested());
 });
 
+api.get('/search/', function(req, res) {
+  res.json([]);
+});
+
 api.get('/search/:term', function(req, res) {
   res.json(items.search(req.params.term));
 });
@@ -71,10 +75,10 @@ api.get('/item/:id', (req, res) => {
 })
 
 app.use('/api/v1/', api);
-
-app.get('/', (req, res) => res.sendFile(path.join(__dirname + '/dist/index.html')));
 app.get('/bundle.js', (req, res) => res.sendFile(path.join(__dirname + '/dist/bundle.js')));
 app.get('/style.css', (req, res) => res.sendFile(path.join(__dirname + '/dist/style.css')));
+
+app.get('/*', (req, res) => res.sendFile(path.join(__dirname + '/dist/index.html')));
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')

@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import MainItemBox from './components/MainItemBox';
-import ItemGraphWrapper from './components/ItemGraphWrapper';
+import SearchBar from './components/SearchBar';
+import Router from './components/Router';
 
 ReactDOM.render(
   <div>
-    <MainItemBox id="12002"></MainItemBox>
-    <ItemGraphWrapper id="12002" duration="year"></ItemGraphWrapper>
+    <div className="header">
+      <SearchBar></SearchBar>
+    </div>
+    <Router></Router>
   </div>,
   document.getElementById('root')
 );

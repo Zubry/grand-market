@@ -58,13 +58,17 @@ export default class MainItemBox extends React.Component {
               <td className="td-label">Selling price:</td>
               <td>{this.formatGP(this.state.item['sell-price'])}</td>
               <td className="td-label">Buy/Sell ratio:</td>
-              <td>{this.formatFinancial(this.state.item['ratio'].toFixed(2))}</td>
+              <td>{this.formatFinancial((this.state.item['ratio'] || 0).toFixed(2))}</td>
             </tr>
             <tr>
               <td className="td-label">Profit:</td>
               <td>{this.formatFinancial(this.state.item['margin'])}</td>
               <td className="td-label">Return:</td>
-              <td>{this.formatFinancial((((this.state.item['sell-price'] - this.state.item['offer-price']) / this.state.item['offer-price']) * 100).toFixed(2))}%</td>
+              <td>{
+                this.state.item['sell-price'] && this.state.item['offer-price']
+                ? this.formatFinancial(((this.state.item['sell-price'] - this.state.item['offer-price']) / this.state.item['offer-price'] * 100).toFixed(2))
+                : '--'
+              }%</td>
             </tr>
           </tbody>
         </table>
